@@ -1,1 +1,1 @@
-# nango-render
+A simple repo used to deploy Nango on render.com. 

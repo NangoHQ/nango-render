@@ -1,0 +1,1 @@
+FROM nangohq/worker:latest
