@@ -5,8 +5,7 @@ services:
     repo: https://github.com/NangoHQ/nango-render
     plan: free
     branch: main
-    rootDir: ./
-    dockerCommand: docker build -f server/Dockerfile .
+    rootDir: ./server/
     envVars:
       - key: NANGO_DB_PASSWORD
         fromDatabase:
@@ -34,8 +33,7 @@ services:
     repo: https://github.com/NangoHQ/nango-render
     plan: starter
     branch: main
-    rootDir: ./
-    dockerCommand: docker build -f worker/Dockerfile .
+    rootDir: ./worker/
     envVars:
       - key: NANGO_DB_PASSWORD
         fromDatabase:
@@ -63,8 +61,7 @@ services:
     repo: https://github.com/NangoHQ/nango-render
     plan: starter
     branch: main
-    rootDir: ./
-    dockerCommand: docker build -f temporal/Dockerfile .
+    rootDir: ./temporal/
     envVars: 
       - key: DB
         value: postgresql
