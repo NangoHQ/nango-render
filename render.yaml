@@ -67,7 +67,7 @@ services:
     dockerCommand: docker build -f temporal/Dockerfile .
     envVars: 
       - key: DB
-          value: postgresql
+        value: postgresql
       - key: POSTGRES_SEEDS
         fromDatabase: 
           name: nango-db
@@ -77,6 +77,7 @@ services:
           name: nango-db
           property: port
       - key: POSTGRES_USER
+        fromDatabase: 
           name: nango-db
           property: user
       - key: POSTGRES_PWD
