@@ -32,7 +32,7 @@ services:
     name: nango-worker
     env: docker
     repo: https://github.com/NangoHQ/nango-render
-    plan: free
+    plan: starter
     branch: main
     rootDir: ./
     dockerCommand: docker build -f worker/Dockerfile .
@@ -53,15 +53,15 @@ services:
         value: TRUE
       - key: TEMPORAL_ADDRESS
         fromService:
-            name: nango-temporal
-            type: pserv
-            property: hostport
+          name: nango-temporal
+          type: pserv
+          property: hostport
 
   - type: pserv
     name: nango-temporal
     env: docker
     repo: https://github.com/NangoHQ/nango-render
-    plan: free
+    plan: starter
     branch: main
     rootDir: ./
     dockerCommand: docker build -f temporal/Dockerfile .
