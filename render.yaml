@@ -7,6 +7,10 @@ services:
     branch: main
     rootDir: ./server/
     envVars:
+      - key: NANGO_DB_NAME
+        fromDatabase: 
+          name: nango-db
+          property: database
       - key: NANGO_DB_PASSWORD
         fromDatabase:
           name: nango-db
@@ -35,6 +39,10 @@ services:
     branch: main
     rootDir: ./worker/
     envVars:
+      - key: NANGO_DB_NAME
+        fromDatabase: 
+          name: nango-db
+          property: database
       - key: NANGO_DB_PASSWORD
         fromDatabase:
           name: nango-db
