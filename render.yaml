@@ -3,7 +3,7 @@ services:
     name: nango-server
     env: docker
     repo: https://github.com/NangoHQ/nango-render
-    plan: free
+    plan: starter
     branch: main
     rootDir: ./server/
     envVars:
