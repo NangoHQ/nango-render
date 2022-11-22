@@ -31,7 +31,7 @@ services:
           type: pserv
           property: hostport
 
-  - type: pserv
+  - type: worker
     name: nango-worker
     env: docker
     repo: https://github.com/NangoHQ/nango-render
