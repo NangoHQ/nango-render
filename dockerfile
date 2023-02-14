@@ -1,6 +1,6 @@
 FROM nangohq/nango-server:latest
 
-COPY ./entrypoint.sh /usr/bin/entrypoint.sh
+ARG RENDER_EXTERNAL_URL
+ENV NANGO_SERVER_URL=$RENDER_EXTERNAL_URL
 
-ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 CMD [ "node", "packages/server/dist/server.js" ]

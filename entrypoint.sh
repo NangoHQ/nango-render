@@ -1,3 +1,0 @@
-export NANGO_SERVER_URL=$RENDER_EXTERNAL_URL
-
-exec "$@"
