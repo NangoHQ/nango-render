@@ -24,6 +24,10 @@ services:
                 property: port
           - key: NANGO_DB_SSL
             value: TRUE
+          - key: NANGO_DASHBOARD_USERNAME
+            value: nango
+          - key: NANGO_DASHBOARD_PASSWORD
+            value: nango
           - key: SERVER_PORT
             value: 443
 databases:
