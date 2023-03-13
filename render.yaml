@@ -27,7 +27,7 @@ services:
           - key: NANGO_DASHBOARD_USERNAME
             value: nango
           - key: NANGO_DASHBOARD_PASSWORD
-            value: nango
+            generateValue: true
           - key: SERVER_PORT
             value: 443
 databases:
